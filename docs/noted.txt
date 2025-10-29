@@ -1,0 +1,51 @@
+# PSIM Simulation Environment Notes
+
+This project reproduces and analyzes a three-phase Sinusoidal PWM inverter in PSIM, adapted for aerospace power applications.  
+The setup and configuration details are provided below to ensure full reproducibility.
+
+
+## Software Environment
+- PSIM Demo Version 11.1.3.2.232  
+- Copyright © 2001–2018 Powersim Inc.  
+- Support: support@powersimtech.com  
+- Website: http://www.powersimtech.com  
+
+
+## Operating Environment
+- OS: Linux Mint XFCE Edition  
+- Compatibility Layer: Wine (Stable version)  
+- PSIM executed via Wine environment for simulation and waveform export.  
+- Verified stable operation and module access under Wine, with minor GUI lag during waveform rendering.
+
+
+
+## Active Modules
+- Motor Drive Module  
+- Digital Control Module  
+- SimCoupler Module  
+- Thermal Module  
+- Renewable Energy Module  
+- PsimBook  
+
+## Active Products
+- SmartCtrl  
+
+
+## Simulation Notes
+- Initial warning observed: *“Maximum number of data points for demo is 600; data have been truncated.”*  
+- Solved by reducing simulation duration to **0.02 s**, maintaining waveform integrity.  
+- Circuit verified for **balanced 120° phase displacement** between outputs.  
+- Generated output waveform exported as `docs/waveform.png`.  
+
+
+## Adaptation Notes
+Although the circuit base followed a public tutorial, this simulation was reinterpreted for **aircraft-grade inverter behavior**, focusing on:
+- clean SPWM modulation for **aerospace power systems**  
+- energy-efficient waveform control for **electric propulsion concepts**  
+- reproducible structure for further **research in avionics and defense power converters**
+
+
+## Reference
+Source study: *“Three-Phase SPWM Inverter Simulation in PSIM”,  Electronics Maddy (YouTube)*  
+https://www.youtube.com/watch?v=0cxj5Xp-rfI
+
